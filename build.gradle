@@ -1,9 +1,18 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 group 'com.hermanzamula'
 version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'com.hermanzamula.Main'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 repositories {
     mavenCentral()
@@ -11,4 +20,8 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+run {
+    standardInput = System.in
 }

@@ -7,12 +7,17 @@ import com.hermanzamula.rpn.operators.SubtractOperator;
 
 public class OperatorsFactory {
     public static Operator fromSign(String sign) {
-        return switch (sign) {
-            case "+" -> new PlusOperator();
-            case "-" -> new SubtractOperator();
-            case "/" -> new DivideOperator();
-            case "*" -> new MultiplyOperator();
-            default -> throw new RuntimeException("Undefined operator: \"" + sign + "\"");
-        };
+        switch (sign) {
+            case "+":
+                return new PlusOperator();
+            case "-":
+                return new SubtractOperator();
+            case "/":
+                return new DivideOperator();
+            case "*":
+                return new MultiplyOperator();
+            default:
+                throw new RuntimeException("Undefined operator: \"" + sign + "\"");
+        }
     }
 }
