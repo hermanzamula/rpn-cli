@@ -9,7 +9,7 @@ version '1.0-SNAPSHOT'
 apply plugin: 'java'
 apply plugin: 'application'
 
-mainClassName = 'com.hermanzamula.Main'
+mainClassName = 'com.hermanzamula.ConsoleApp'
 
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
