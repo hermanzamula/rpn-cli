@@ -14,7 +14,7 @@ public class ConsoleApp {
         while (scanner.hasNextLine()) {
             final String line = scanner.nextLine();
 
-            if (line.contains("quit")) {
+            if (line.contains("q")) {
                 return;
             }
 
